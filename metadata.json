@@ -1,0 +1,5 @@
+{
+  "name": "BookScout",
+  "description": "Extract book details from photos and generate synopses for second-hand bookstores.",
+  "requestFramePermissions": []
+}
