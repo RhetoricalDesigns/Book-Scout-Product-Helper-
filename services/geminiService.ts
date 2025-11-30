@@ -10,7 +10,7 @@ const ai = new GoogleGenAI({ apiKey: process.env.API_KEY });
  */
 export const identifyBookFromImage = async (base64Image: string): Promise<BookAnalysisResult> => {
   try {
-    const model = 'gemini-2.5-flash';
+    const model = 'gemini-flash-latest';
     
     // Clean base64 string if it contains data URI prefix
     const data = base64Image.replace(/^data:image\/(png|jpeg|jpg|webp);base64,/, '');
@@ -75,7 +75,7 @@ export const identifyBookFromImage = async (base64Image: string): Promise<BookAn
  */
 export const findOrGenerateSynopsis = async (title: string, author: string): Promise<string> => {
   try {
-    const model = 'gemini-2.5-flash';
+    const model = 'gemini-flash-latest';
     const prompt = `
       Provide a synopsis for the book "${title}" by "${author}".
       
